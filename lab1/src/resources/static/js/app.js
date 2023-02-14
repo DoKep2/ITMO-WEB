@@ -27,29 +27,12 @@
 //     toggle = !toggle
 // });
 const shopNavButton = document.querySelector('.nav-button:nth-of-type(1)');
-const blogNavButton = document.querySelector('.nav-button:nth-of-type(2)');
 const contactNavButton = document.querySelector('.nav-button:nth-of-type(3)');
 const navOpen = document.querySelector('.nav-open');
 const navOpen2 = document.querySelector('.nav-open-2');
 const shopTimeline = new TimelineLite({
     paused: true, reversed: true
 });
-const blogTimeLine = new TimelineLite({
-    paused: true, reversed: true
-});
-blogTimeLine.to('.cover', 1, {
-    width: '60%', ease: Power2.easeOut
-})
-    .to('nav', 1, {
-        height: '100%', ease: Power2.easeOut
-    }, '-=0.5')
-    .fromTo('#blog.nav-open-2', 0.5, {
-        opacity: 0, x: 50, ease: Power2.easeOut
-    }, {
-        opacity: 1, x: 0, onComplete: function () {
-            navOpen2.style.pointerEvents = 'auto'
-        }
-    });
 shopTimeline.to('.cover', 1, {
     width: '60%', ease: Power2.easeOut
 })
@@ -72,17 +55,6 @@ shopNavButton.addEventListener('click', (e) => {
     }
     toggleTween(shopTimeline)
 });
-
-
-blogNavButton.addEventListener('click', (e) => {
-    if (blogTimeLine.isActive()) {
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        return false;
-    }
-    toggleTween(blogTimeLine)
-});
-
 
 function toggleTween(tween) {
     tween.reversed() ? tween.play() : tween.reverse()
