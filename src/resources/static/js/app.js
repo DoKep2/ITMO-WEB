@@ -47,14 +47,17 @@ shopTimeline.to('.cover', 1, {
         }
     });
 
-shopNavButton.addEventListener('click', (e) => {
-    if (shopTimeline.isActive()) {
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        return false;
-    }
-    toggleTween(shopTimeline)
-});
+if (shopNavButton != null) {
+    shopNavButton.addEventListener('click', (e) => {
+        if (shopTimeline.isActive()) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            return false;
+        }
+        toggleTween(shopTimeline)
+    });
+}
+
 
 function toggleTween(tween) {
     tween.reversed() ? tween.play() : tween.reverse()

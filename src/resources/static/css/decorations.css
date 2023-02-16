@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+table {
+    margin-left: 30px;
+}
+
+.chair {
+    height: 60%;
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-70%, -70%);
+}
+
+.s1 {
+    background-image: url("../files/couch.jpg");
+    background-size: cover;
+}
+
+.section h1 {
+    font-size: 64px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background: linear-gradient(to left, #87c7df, #648896);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.s2 {
+    background: linear-gradient(to left top, #cbcbcb, white);
+
+}
+
+.s2 h1 {
+    font-size: 48px;
+    background: linear-gradient(to left, #303030, #414141);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    width: 50%;
+    margin: 30% 20% 20% 5%;
+    font-size: 20px;
+}
+
+.description ul {
+    margin: 50px 0;;
+    line-height: 30px;
+}
+
+.style {
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(to left, #87c7df, lightcoral);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Calibri, serif;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+table {
+    display: grid;
+    border-collapse: collapse;
+    min-width: 100%;
+    grid-template-columns:
+    minmax(150px, 1.67fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 3.33fr);
+}
+
+thead,
+tbody,
+tr {
+    display: contents;
+}
+
+th,
+td {
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background: #6c7ae0;
+    text-align: left;
+    font-weight: normal;
+    font-size: 1.1rem;
+    color: white;
+    position: relative;
+}
+
+th:last-child {
+    border: 0;
+}
+
+.resize-handle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0;
+    width: 3px;
+    cursor: col-resize;
+}
+
+.resize-handle:hover,
+    /* The following selector is needed so the handle is visible during resize even if the mouse isn't over the handle anymore */
+.header--being-resized .resize-handle {
+    opacity: 0.5;
+}
+
+th:hover .resize-handle {
+    opacity: 0.3;
+}
+
+td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #808080;
+}
+
+tr:nth-child(even) td {
+    background: #f2f2f2;
+}
