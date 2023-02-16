@@ -15,8 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </svg>
         <div class="nav-open">
             <div class="contact">
-                <h3>Contact</h3>
-                <p>0212-2322-443</p>
+                <h3 id="load-time"></h3>
             </div>
             <div class="social">
                 <h3>Social</h3>
