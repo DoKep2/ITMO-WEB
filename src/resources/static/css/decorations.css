@@ -8,8 +8,14 @@ table {
     margin-left: 30px;
 }
 
-@media (max-height: 500px) {
-    .
+@media (max-width: 900px) {
+    .chair {
+        display: none;
+    }
+}
+
+#reviewsTable {
+    /*margin-bottom: 10px;*/
 }
 
 .preloader {
@@ -49,13 +55,14 @@ table {
 .section h1 {
     font-size: 64px;
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -20%);
     background: linear-gradient(to left, #87c7df, #648896);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 
 .s2 {
     background: linear-gradient(to left top, #cbcbcb, white);
