@@ -8,6 +8,31 @@ table {
     margin-left: 30px;
 }
 
+@media (max-height: 500px) {
+    .
+}
+
+.preloader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+#preloader {
+    border-radius: 30px;
+}
+
+#preloader + h3 {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+* {
+    /*outline: 1px solid red;*/
+}
+
 .chair {
     height: 60%;
     position: absolute;
@@ -74,7 +99,10 @@ body {
 table {
     display: grid;
     border-collapse: collapse;
-    min-width: 100%;
+    /*min-width: 100%;*/
+    max-width: 95%;
+    width: 95%;
+    margin-top: 200px;
     grid-template-columns:
     minmax(150px, 1.67fr)
     minmax(150px, 1.67fr)
@@ -92,9 +120,8 @@ tr {
 th,
 td {
     padding: 15px;
-    overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    line-height: 25px;
 }
 
 th {

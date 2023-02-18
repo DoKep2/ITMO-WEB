@@ -32,6 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     </a>
                 </div>
             </div>
+            <div class="back">
+                <a href="./index.html">
+                <h3  style="text-decoration: none; color: black">Back</h3>
+                </a>
+            </div>
         </div>
     `
     document.querySelector('header').appendChild(header);
@@ -42,13 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const navOpen = document.querySelector('.nav-open');
         const contact = document.querySelector('.contact');
         const social = document.querySelector('.social');
-        const logo = document.querySelector('.logo');
-
+        const back = document.querySelector('.back');
         const tl = new TimelineMax({paused: true, reversed: true});
 
         tl.to(navOpen, 0.5, {y: 0})
             .fromTo(contact, 0.5, {opacity: 0, y: 10}, {opacity: 1, y: 0})
-            .fromTo(social, 0.5, {opacity: 0, y: 10}, {opacity: 1, y: 0});
+            .fromTo(social, 0.5, {opacity: 0, y: 10}, {opacity: 1, y: 0})
+            .fromTo(back, 0.5, {opacity: 0, y: 10}, {opacity: 1, y: 0});
 
         burger.addEventListener('click', () => {
             tl.reversed() ? tl.play() : tl.reverse();

@@ -48,7 +48,6 @@ let headerBeingResized;
 // Where the magic happens. I.e. when they're actually resizing
 const onMouseMove = (e) => requestAnimationFrame(() => {
     console.log('onMouseMove');
-
     // Calculate the desired width
     horizontalScrollOffset = document.documentElement.scrollLeft;
     const width = (horizontalScrollOffset + e.clientX) - headerBeingResized.offsetLeft;
